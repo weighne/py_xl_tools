@@ -8,6 +8,9 @@ from openpyxl.styles import Font, colors
 match_fill = PatternFill(patternType="solid", fgColor=colors.Color(rgb="0000FF00"))
 
 def find_matches(file1, file2, column1, column2, out_file):
+    '''
+    Find matches and save highlighted cells to copy of second sheet
+    '''
     wb1 = load_workbook(file1)
     wb2 = load_workbook(file2)
     wb1_active = wb1.active
